@@ -1,3 +1,7 @@
+
+#include <hidef.h>      /* common defines and macros */
+#include "derivative.h"      /* derivative-specific definitions */
+
 // Switch and indicator LED library
 // Revision History:
 // May 9th 2014 - Initial Port to C - Simon Walker

@@ -1,14 +1,12 @@
 #include <hidef.h>      /* common defines and macros */
 #include "derivative.h"      /* derivative-specific definitions */
-
-
-
-
+#include "sw_lib.c"
 
 
 void main(void) {
   /* put your own code here */
-  
+      SWL_Init;
+      PLL_To20MHz;
 
 
 	EnableInterrupts;
