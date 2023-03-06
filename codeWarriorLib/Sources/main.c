@@ -13,7 +13,12 @@ void main(void) {
 
 
   for(;;) {
+  
+    SWL_TOG(SWL_RED);
+    
     _FEED_COP(); /* feeds the dog */
+    
+    
   } /* loop forever */
   /* please make sure that you never leave main */
 }
