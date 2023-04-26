@@ -1,4 +1,3 @@
-
 #include <hidef.h>      /* common defines and macros */
 #include "derivative.h"      /* derivative-specific definitions */
 
@@ -27,7 +26,8 @@ typedef enum SwitchPos
   SWL_RIGHT= 0b00000010,
   SWL_DOWN = 0b00000100,
   SWL_LEFT = 0b00001000,
-  SWL_UP   = 0b00010000 
+  SWL_UP   = 0b00010000,
+  SWL_ANY = 0b00011111 
 } SWL_SwitchPos;
 
 // option to add debounce in switch state checks

@@ -1,4 +1,4 @@
- #include "sw_lib.h"
+ #include "swl_led.h"
  #include "derivative.h"
  
  
@@ -18,7 +18,7 @@
  }
  
 void SWL_OFF (SWL_LEDColour led){
-      PT1AD1 &= led;
+      PT1AD1 &= ~led;
 }
 
 void SWL_TOG (SWL_LEDColour led){
@@ -36,12 +36,12 @@ int SWL_Pushed (SWL_SwitchPos pos){
 
 // is any switch being pushed (T/F (1/0))
 int SWL_Any (void){
-     if(PT1AD1 & 00011111)
+    if(PT1AD1 & SWL_ANY)
       return 1;
      else return 0;
 }
 
-// bring the bus clock to 20MHz
+//Set clock speed to 20MHz
 void PLL_To20MHz (void)
 {
  // PLLCLK = 2 x OSCCLK x ([SYNR + 1] / [REFDV + 1])
